@@ -8,21 +8,50 @@
 </head>
   
 <body style="text-align:center;" id="body">
-    <h1>Enter Your Color Choice</h1>
+    <h1>Random Colour Scheme Generator</h1>
       
-    <button type="button" onclick="changecolor()">
-        Color
+    <button type="button" onclick="changecolor1()">
+        Background Colour
     </button>
+
+    <button type="button" onclick="changecolor2()">
+        Text Colour
+    </button>
+
+    <p id="output1"></p>
+    <p2 id="output2"></p2>
          
     <script>
-        function changecolor()
+        function changecolor1()
         {
-            // Generating random color each time
-            var color = "#"+(Math.random()*16777215|0).toString(16);
+            // Generating random color for background each time
+            var color1 = "#"+(Math.random()*16777215|0).toString(16);
               
-            $("body").css("background-color",color);
+            $("body").css("background-color",color1);
+
+            document.getElementById("output1").innerHTML = 
+                "Your chosen background colour is "+ color1 ;
         }
     </script>
+
+    <script>
+        function changecolor2()
+        {
+            // Generating random color for text each time
+            var color2 = "#"+(Math.random()*16777215|0).toString(16);
+
+            $("body").css("color",color2);
+            
+            document.getElementById("output2").innerHTML = 
+                "Your chosen text colour is "+ color2 ;
+
+            
+
+        }
+    </script>
+
+
+
 </body>
-    
+
 </html>
