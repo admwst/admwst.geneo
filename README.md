@@ -1,1 +1,1 @@
-# admwst.geneo
+# admwst
